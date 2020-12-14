@@ -1,0 +1,37 @@
+<header>
+    <div class="header-nav-container">
+        <div class="nav-fixed">
+            <div class="nav-upper">
+                <div class="upper-container nav-upper-container">
+                    <a class="site-icon" href="{{ site.global.base_url | default: "/" | relative_url }}">
+                        <img src="{{ site.global.site_icon }}">
+                    </a>
+                </div>
+                <nav>
+                    <a href="{{ site.global.base_url | default: "/" | relative_url }}">
+                        <div class="nav-inner">
+                            <div class="nav-icon">
+                                {%- include home_icon.html -%}
+                            </div>
+                            <span class="nav-caption">{{ site.global.nav.caption_home | default: "Home" }}</span>
+                        </div>
+                    </a>
+                </nav>
+            </div>
+            <div class="nav-lower">
+                <div class="nav-lower-profile">
+                    <img class="profile-image" src="{{ site.global.profile.image.url | default: "
+                        https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" }}"
+                        alt="profile image">
+                    <div class="profile-inner-details">
+                        <span class="profile-name">{{ site.global.profile.name | default: "Your Name" }}</span>
+                        <span class="profile-id">{{ site.global.profile.id | default: "@your_id" }}</span>
+                    </div>
+                    <div class="profile-button">
+                        {%- include threedot_icon.html -%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

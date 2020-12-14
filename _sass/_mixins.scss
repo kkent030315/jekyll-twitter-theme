@@ -1,0 +1,16 @@
+@mixin tablet() {
+    @media (max-width: (680px)) {
+        @content;
+    }
+}
+@mixin smartphone() {
+    @media (max-width: (480px)) {
+        @content;
+    }
+}
+
+@mixin elipse_by_line($line_number) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line_number;
+}

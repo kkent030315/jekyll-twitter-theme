@@ -1,0 +1,26 @@
+---
+layout: default
+helloworld: 123
+---
+
+<div class="main-primary-container">
+    {%- if site.posts.size > 0 -%}
+    <div class="posts-container">
+        {%- for post in site.posts -%}
+        {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+        <a class="post-item" href="">
+            <article class="post-inner">
+                <img class="post-thumbnail" src="{{ post.thumbnail | relative_url | default: site.global.post.default_thumbnail }}">
+                <div class="post-details">
+                    <span class="post-title">{{ post.title }}</span>
+                    <span class="post-date">{{ post.date | date: date_format }}</span>
+                    <span class="post-description">{{ post.description }}</span>
+                </div>
+            </article>
+        </a>
+        {%- endfor -%}
+    </div>
+    {%- else -%}
+    <h1>Looks like there aren't any posts yet</h1>
+    {%- endif -%}
+</div>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+
+{%- include head.html -%}
+
+<body>
+    <div class="wrapper">
+        {%- include header.html -%}
+        <main>
+            {%- if page.layout == "home" -%}
+            {{ content }}
+            {%- else -%}
+            <div class="main-primary-container">
+                <div class="content-header">
+                    <div class="back-icon">
+                        {%- include arrow_left_icon.html -%}
+                    </div>
+                    <span class="content-title">Header</span>
+                </div>
+                {{ content }}
+            </div>
+            {%- endif -%}
+        </main>
+        {%- include footer.html -%}
+    </div>
+</body>
+
+</html>
