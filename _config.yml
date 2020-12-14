@@ -18,3 +18,4 @@ global:
   twitter:
     show_twitter_embed_timeline: true
     target_id: "google"
+    limit: 5

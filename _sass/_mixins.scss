@@ -9,6 +9,30 @@
     }
 }
 
+@mixin desktop_collapsed() {
+    @media (max-width: ($width-main + $width-nav)) {
+        @content;
+    }
+}
+
+@mixin desktop_collapsed_lv2() {
+    @media (max-width: ($width-main + $width-nav-collapsed)) {
+        @content;
+    }
+}
+
+@mixin desktop_collapsed_lv3() {
+    @media (max-width: (1004px)) {
+        @content;
+    }
+}
+
+@mixin desktop_collapsed_lv4() {
+    @media (max-width: (710px)) {
+        @content;
+    }
+}
+
 @mixin elipse_by_line($line_number) {
     display: -webkit-box;
     -webkit-box-orient: vertical;

@@ -26,8 +26,7 @@
                 <div class="main-secondary-inner">
                     {%- if site.global.twitter.show_twitter_embed_timeline -%}
                     <div class="twitter-embed">
-                        <a data-tweet-limit="3" class="twitter-timeline" href="https://twitter.com/{{ site.global.twitter.target_id }}?ref_src=twsrc%5Etfw">Tweets
-                            by realDonaldTrump</a>
+                        <a data-tweet-limit="{{ site.global.twitter.limit | default: "10" }}" class="twitter-timeline" href="https://twitter.com/{{ site.global.twitter.target_id }}?ref_src=twsrc%5Etfw"></a>
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                     {%- endif -%}
