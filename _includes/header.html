@@ -3,7 +3,7 @@
         <div class="nav-fixed">
             <div class="nav-upper">
                 <div class="upper-container nav-upper-container">
-                    <a class="site-icon" href="{{ site.global.base_url | default: "/" | relative_url }}">
+                    <a class="site-icon" href="{{ site.global.base_url | default: " /" | relative_url }}">
                         <img src="{{ site.global.site_icon }}">
                     </a>
                 </div>
@@ -16,6 +16,28 @@
                             <span class="nav-caption">{{ site.global.nav.caption_home | default: "Home" }}</span>
                         </div>
                     </a>
+                    {%- assign default_paths = site.pages | map: "path" -%}
+                    {%- assign page_paths = site.header_pages | default: default_paths | reverse -%}
+                    
+                    {%- if page_paths -%}
+                    {%- for path in page_paths -%}
+                    {%- assign x = site.pages | where: "path", path | first -%}
+                    {%- if x.title -%}
+                    {%- if x.title != "404" -%}
+                    <a href="{{ x.url | relative_url }}">
+                        <div class="nav-inner">
+                            <div class="nav-icon">
+                                {%- if x.icon -%}
+                                {%- include {{ x.icon }} -%}
+                                {%- endif -%}
+                            </div>
+                            <span class="nav-caption">{{ x.title }}</span>
+                        </div>
+                    </a>
+                    {%- endif -%}
+                    {%- endif -%}
+                    {%- endfor -%}
+                    {%- endif -%}
                 </nav>
             </div>
             <div class="nav-lower">
