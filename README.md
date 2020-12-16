@@ -43,3 +43,7 @@ global:
     target_id: "<twitter id that you desired to show timeline on the right side of the page>"
     limit: 5
 ```
+
+# Issues
+
+Having issues with this theme? [Create New Issue](https://github.com/kkent030315/jekyll-twitter-theme/issues) and I can look at that. :)
