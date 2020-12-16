@@ -4,9 +4,10 @@
   <img src="https://img.shields.io/gem/v/jekyll-twitter-theme?style=for-the-badge">
   <img src="https://img.shields.io/github/license/kkent030315/jekyll-twitter-theme?style=for-the-badge">
   <img src="https://img.shields.io/travis/kkent030315/jekyll-twitter-theme?style=for-the-badge">
+  <img src="https://img.shields.io/badge/DEMO-AVAILABLE-%23008000?style=for-the-badge">
 </p>
 
-[Demo](https://www.godeye.club/jekyll-twitter-theme/)
+[Demo](https://kkent030315.github.io/jekyll-twitter-theme/)
 
 # jekyll-twitter-theme
 
