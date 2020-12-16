@@ -12,6 +12,29 @@
 
 A twitter theme for Jekyll.
 
+# Usage
+
+1. Install [Jekyll](https://jekyllrb.com/docs/step-by-step/01-setup/)
+
+2. Install theme:
+
+```sh
+$ gem install jekyll-twitter-theme
+```
+
+3. In `_config.yml`:
+
+```yml
+# Build settings
+theme: minima
+```
+
+4. launch on local as development:
+
+```sh
+$ bundle exec jekyll serve
+```
+
 # Responsive
 
 This theme is responsive for every single environments.
