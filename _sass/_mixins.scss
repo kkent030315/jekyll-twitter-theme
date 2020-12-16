@@ -43,6 +43,15 @@
     -ms-overflow-style: none; // IE, Edge
     scrollbar-width: none; // Firefox
     &::-webkit-scrollbar {
-        display:none; // Chrome, Safari
+        display: none; // Chrome, Safari
     }
+}
+
+@mixin elipse_force() {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
 }
