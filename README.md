@@ -40,7 +40,7 @@ global:
     default_thumbnail: "<default thumbnail of the post>"
   twitter:
     show_twitter_embed_timeline: true
-    target_id: "<twitter id of you desired to show timeline on the right side of the page>"
+    target_id: "<twitter id of a user which you desired to show the timeline on the right side of the page>"
     limit: 5
 ```
 
