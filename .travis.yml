@@ -6,3 +6,6 @@ install:
   - gem install jekyll
 script:
   - jekyll build
+branches:
+  only:
+  - main
