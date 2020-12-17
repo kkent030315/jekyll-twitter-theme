@@ -27,7 +27,7 @@ $ gem install jekyll-twitter-theme
 
 ```yml
 # Build settings
-theme: minima
+theme: jekyll-twitter-theme
 ```
 
 4. launch on local as development:
