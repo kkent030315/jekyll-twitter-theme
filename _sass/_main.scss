@@ -318,6 +318,7 @@ main {
         border-radius: 50%;
         width: 39px;
         height: 39px;
+        transition: .2s ease;
         &:hover {
             background: rgba($color-primary, 0.15);
         }
