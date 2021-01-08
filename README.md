@@ -36,14 +36,6 @@ theme: jekyll-twitter-theme
 $ bundle exec jekyll serve
 ```
 
-# Responsive
-
-This theme is responsive for every single environments.
-
-(`iPad (left)`, `iPhoneX (right)`)
-
-![Responsive](/assets/images/jekyll-twitter-theme-responsive.png)
-
 # Configurations
 
 There are some theme-specific configurations as follows:
