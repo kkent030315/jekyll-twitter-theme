@@ -13,12 +13,22 @@ layout: default
             {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
             <a class="post-item" href="{{ post.url | relative_url }}">
                 <article class="post-inner">
-                    <img class="post-thumbnail"
-                        src="{{ post.thumbnail | relative_url | default: site.global.post.default_thumbnail }}">
-                    <div class="post-details">
-                        <span class="post-title">{{ post.title }}</span>
-                        <span class="post-date">{{ post.date | date: date_format }}</span>
-                        <span class="post-description">{{ post.description }}</span>
+                    <div class="post-thumbnail-container">
+                        <img class="post-thumbnail"
+                            src="{{ post.thumbnail | relative_url | default: site.global.post.default_thumbnail }}">
+                    </div>
+                    <div class="post-inner-right">
+                        <div class="post-details">
+                            <span class="post-title">{{ post.title }}</span>
+                            <span class="post-date">{{ post.date | date: date_format }}</span>
+                            <span class="post-description">{{ post.description }}</span>
+                        </div>
+                        <div class="post-decorations">
+                            <div class="post-decoration-icon">{% include tw_reply_icon.html %}</div>
+                            <div class="post-decoration-icon">{% include tw_retweet_icon.html %}</div>
+                            <div class="post-decoration-icon">{% include tw_like_icon.html %}</div>
+                            <div class="post-decoration-icon">{% include tw_share_icon.html %}</div>
+                        </div>
                     </div>
                 </article>
             </a>

@@ -106,7 +106,7 @@ header {
             text-decoration: none;
             color: $color-font;
         }
-        >a {
+        > a {
             width: 100%;
             @include desktop_collapsed() {
                 width: fit-content;
@@ -269,7 +269,7 @@ main {
         width: $width-body;
         max-width: $width-body;
         border-right: 1px solid $color-border;
-        margin-bottom: 20px;
+        //margin-bottom: 20px;
         @include desktop_collapsed_lv4() {
             width: 100%;
         }
@@ -318,7 +318,7 @@ main {
         border-radius: 50%;
         width: 39px;
         height: 39px;
-        transition: .2s ease;
+        transition: 0.2s ease;
         &:hover {
             background: rgba($color-primary, 0.15);
         }
@@ -332,11 +332,12 @@ main {
 }
 
 .posts-container {
+    background: $color-background-hover;
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
+    //padding-left: 20px;
+    //padding-right: 20px;
+    //padding-top: 20px;
     width: 100%;
     @include smartphone() {
         padding: 12px !important;
@@ -346,14 +347,16 @@ main {
         color: $color-font;
     }
     .post-item {
+        background: $color-background;
         padding: 10px;
-        border-radius: 12px;
-        border: 1px solid $color-border;
+        border-top: 1px solid $color-border;
         display: flex;
         flex-direction: row;
-        margin-bottom: 12px;
+        &:first-child {
+            margin-top: 10px;
+        }
         &:last-child {
-            margin-bottom: 0;
+            border-bottom: 1px solid $color-border;
         }
         &:hover {
             background: $color-background-hover;
@@ -362,13 +365,21 @@ main {
             display: flex;
             flex-direction: row;
             width: 100%;
+            .post-inner-right {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
         }
-        .post-thumbnail {
-            border-radius: 12px;
-            object-fit: cover;
-            width: 120px;
-            height: 120px;
+        .post-thumbnail-container {
+            height: 100%;
             margin-right: 10px;
+            .post-thumbnail {
+                border-radius: 12px;
+                object-fit: cover;
+                width: 120px;
+                height: 120px;
+            }
         }
         .post-details {
             display: flex;
@@ -392,6 +403,19 @@ main {
                 max-height: 70px;
                 overflow: hidden;
                 @include elipse_by_line(3);
+            }
+        }
+        .post-decorations {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 425px;
+            margin-top: auto;
+            .post-decoration-icon {
+                svg {
+                    width: 1.25em;
+                    fill: $color-font-thin;
+                }
             }
         }
     }
@@ -458,7 +482,8 @@ main {
         -webkit-text-size-adjust: 100%;
         line-height: 1.5;
         color: #24292e;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji,
+            Segoe UI Emoji;
         font-size: 16px;
         line-height: 1.5;
         word-wrap: break-word;
@@ -646,7 +671,7 @@ main {
         -webkit-appearance: none;
         appearance: none;
     }
-     :checked+.radio-label {
+    :checked + .radio-label {
         position: relative;
         z-index: 1;
         border-color: #0366d6;
@@ -899,10 +924,10 @@ main {
     body:after {
         clear: both;
     }
-    body> :first-child {
+    body > :first-child {
         margin-top: 0 !important;
     }
-    body> :last-child {
+    body > :last-child {
         margin-bottom: 0 !important;
     }
     a:not([href]) {
@@ -932,10 +957,10 @@ main {
         color: #6a737d;
         border-left: 0.25em solid #dfe2e5;
     }
-    blockquote> :first-child {
+    blockquote > :first-child {
         margin-top: 0;
     }
-    blockquote> :last-child {
+    blockquote > :last-child {
         margin-bottom: 0;
     }
     h1,
@@ -987,10 +1012,10 @@ main {
     li {
         word-wrap: break-all;
     }
-    li>p {
+    li > p {
         margin-top: 16px;
     }
-    li+li {
+    li + li {
         margin-top: 0.25em;
     }
     dl {
@@ -1048,7 +1073,7 @@ main {
     pre {
         word-wrap: normal;
     }
-    pre>code {
+    pre > code {
         padding: 0;
         margin: 0;
         font-size: 100%;
@@ -1197,7 +1222,7 @@ main {
     .task-list-item {
         list-style-type: none;
     }
-    .task-list-item+.task-list-item {
+    .task-list-item + .task-list-item {
         margin-top: 3px;
     }
     .task-list-item input {
@@ -1216,4 +1241,14 @@ main {
     h1 {
         font-size: 74px !important;
     }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
 }
