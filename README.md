@@ -4,6 +4,7 @@
   <img src="https://img.shields.io/gem/v/jekyll-twitter-theme?style=for-the-badge">
   <img src="https://img.shields.io/github/license/kkent030315/jekyll-twitter-theme?style=for-the-badge">
   <img src="https://img.shields.io/travis/kkent030315/jekyll-twitter-theme?style=for-the-badge">
+  <img src="https://img.shields.io/gem/dt/jekyll-twitter-theme?style=for-the-badge">
   <img src="https://img.shields.io/badge/DEMO-AVAILABLE-%23008000?style=for-the-badge">
 </p>
 
